@@ -1,8 +1,47 @@
 import React from 'react';
+import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
+import { NavLink } from 'react-router-dom';
+import './NaviBar.module.css';
+import cl from './NaviBar.module.css';
+import logo from '../../images/logo.png';
+import basket from '../../images/basket.png';
+import user from '../../images/user.png';
 
 const NaviBar = () => {
     return (
-        <div>NaviBar</div>
+        <Navbar className={cl.myNavbar} expand="lg">
+            <Container>
+
+                <NavLink to="/" className={cl.myNavbarBrand}>
+                    <Image src={logo} />
+                </NavLink>
+
+                <NavbarToggle  aria-controls="basic-navbar-nav" />
+
+                <NavbarCollapse className={cl.myNavbarCollapse} id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <NavLink className={cl.myNavLink} to="/">Главная</NavLink>
+                        <NavLink className={cl.myNavLink} to="/about">О нас</NavLink>
+                        <NavLink className={cl.myNavLink} to="/seminar">Обучение</NavLink>
+                        <NavLink className={cl.myNavLink} to="/contacts">Контакты</NavLink>
+
+                    </Nav>
+                </NavbarCollapse>
+
+                <div className={cl.logoBasketSearch}>
+                    <NavLink className={[cl.myNavLink, cl.loginText].join(' ')} to="/login">Вход/Регистрация</NavLink>
+                    <NavLink className={[cl.myNavLink, cl.loginImg].join(' ')} to="/login">
+                        <Image width={35} height={35} src={user}/>
+                    </NavLink>
+                    <NavLink className={cl.myNavLink} to="/basket">
+                        <Image width={50} height={50} src={basket} />
+                    </NavLink>
+                </div>
+
+            </Container>
+        </Navbar>
     )
 }
 

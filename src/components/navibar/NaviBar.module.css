@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.myNavbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px 0;
+    background-color:rgba(241, 241, 241, 0.98);
+}
+
+.myNavbarBrand{
+    max-width: 180px;
+    margin: 0;
+    padding: 0;
+}
+.myNavbarBrand img{
+    max-width: 100%;
+}
+
+.myNavbarCollapse{
+    margin-left: 10px;
+}
+
+.myNavLink{
+    text-decoration: none;
+    padding: 0 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+}
+.myNavLink:hover{
+    color: #e81912;
+}
+.myNavLink.active{
+    color: #e81912;
+}
+
+.logoBasketSearch{
+    display: flex;
+    align-items: center;
+}
+
+.loginImg{
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .loginText{
+        display: none;
+    }
+    .loginImg{
+        display: block;
+    }
+    .loginImg img{
+        margin: 0 20px 0 20px;
+    }
+    .navbarBtn{
+        order: 3;
+    }
+    .myNavLink{
+        margin: 15px 0;
+        padding: 0;
+    }
+}
+@media (max-width: 494px) {
+    .myNavbarBrand{
+        max-width: 100px;
+    }
+}

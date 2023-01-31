@@ -4,9 +4,9 @@ import About from '../pages/About'
 import Auth from '../pages/Auth'
 import Basket from '../pages/Basket'
 import Main from '../pages/Main'
+import PrivacyPolicy from '../pages/PrivacyPolicy'
 import ProductCategory from '../pages/ProductCategory'
 import ProductCategoryCosmetica from '../pages/ProductCategoryCosmetica'
-import Registration from '../pages/Registration'
 import Shop from '../pages/Shop'
 
 const Routing = () => {
@@ -15,12 +15,12 @@ const Routing = () => {
             <Routes>
                 <Route path='/' element={< Main />} />
                 <Route path='/login' element={< Auth />} />
-                <Route path='/registration' element={< Registration />} />
                 <Route path='/about' element={< About />} />
                 <Route path='/shop' element={< Shop />} />
                 <Route path='/basket' element={< Basket />} />
                 <Route path='/category' element={< ProductCategory />} />
                 <Route path='/category/:id' element={< ProductCategoryCosmetica />} />
+                <Route path='/privacyPolicy' element={< PrivacyPolicy />} />
                 <Route path='*' element={<Navigate to='/' />} />
             </Routes>
         </>
