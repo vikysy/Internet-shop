@@ -3,6 +3,8 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import About from '../pages/About'
 import Auth from '../pages/Auth'
 import Basket from '../pages/Basket'
+import Contacts from '../pages/Contacts'
+import Education from '../pages/Education'
 import Main from '../pages/Main'
 import PrivacyPolicy from '../pages/PrivacyPolicy'
 import ProductCategory from '../pages/ProductCategory'
@@ -16,6 +18,8 @@ const Routing = () => {
                 <Route path='/' element={< Main />} />
                 <Route path='/login' element={< Auth />} />
                 <Route path='/about' element={< About />} />
+                <Route path='/education' element={< Education />} />
+                <Route path='/contacts' element={< Contacts />} />
                 <Route path='/shop' element={< Shop />} />
                 <Route path='/basket' element={< Basket />} />
                 <Route path='/category' element={< ProductCategory />} />

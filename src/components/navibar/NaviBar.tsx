@@ -42,9 +42,17 @@ const NaviBar = () => {
                             className={({ isActive }) => (isActive 
                                 ? [cl.myNavLink, cl.active].join(' ') 
                                 : cl.myNavLink)} 
-                            to="/seminar"
+                            to="/education"
                         >
                             Обучение
+                        </NavLink>
+                        <NavLink 
+                            className={({ isActive }) => (isActive 
+                                ? [cl.myNavLink, cl.active].join(' ') 
+                                : cl.myNavLink)} 
+                            to="/shop"
+                        >
+                            Каталог
                         </NavLink>
                         <NavLink 
                             className={({ isActive }) => (isActive 

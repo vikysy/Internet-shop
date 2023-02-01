@@ -1,0 +1,51 @@
+.guaranteesInfo{
+    margin-top: 50px;
+}
+
+.guaranteesInfo h1{
+    font-size: 42px;
+    color: #2D2A2A;
+}
+.guaranteesInfo h1 span{
+    font-weight: 700;
+    color: #E81912;
+}
+
+.blockFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.flexElem{
+    max-width: 345px;
+    text-align: center;
+}
+
+.flexElem div{
+    max-width: 80px;
+    margin: 0 auto;
+}
+.flexElem div img{
+    width: 100%;
+}
+.flexElem h3{
+    margin: 15px 0 10px 0;
+    font-weight: 700;
+    font-size: 20px;
+    color: #2D2A2A;
+}
+.flexElem p{
+    margin: 0;
+    font-size: 14px;
+    color: #777777;
+}
+
+@media (max-width:991px) {
+    .blockFlex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
