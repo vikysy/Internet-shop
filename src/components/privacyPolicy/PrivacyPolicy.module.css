@@ -1,0 +1,47 @@
+.myContainer{
+    margin: 96px 0 0 0;
+    padding: 100px 0;
+    background-color: #0a0a0a;
+}
+
+h1{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 78px;
+    color: #FFFFFF;
+}
+
+.info h3{
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #2D2A2A;
+}
+.info p{
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    color: #777777;
+}
+
+@media (max-width: 1023px) {
+    h1{
+        font-size: 68px;
+    }
+}
+@media (max-width: 768px) {
+    h1{
+        font-size: 50px;
+    }
+}
+@media (max-width: 575px) {
+    h1{
+        font-size: 37px;
+    }
+}
+@media (max-width: 424px) {
+    h1{
+        font-size: 26px;
+    }
+}

@@ -1,10 +1,87 @@
 .footer{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color:rgba(241, 241, 241, 0.98);
+    margin-top: 40px;
     padding: 30px 0 20px 0;
+    background-color:rgba(241, 241, 241, 0.98);
+    border-top: 1px solid #e1e1e1;
+}
+
+.footerNav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.footerNav_logo{
+    max-width: 280px;
+}
+.footerNav_logo div{
+    max-width: 190px;
+    margin-bottom: 20px;
+}
+.footerNav_logo div img{
+    max-width: 100%;
+    margin: 0;
+}
+.footerNav_logo p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #777777;
+}
+
+.footerNav_link{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 500px;
+    width: 100%;
+}
+.footerNav_link h2{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #2D2A2A;
+}
+.linksFlex{
+    display: flex;
+    align-items: center;
+}
+.linksFlex div{
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 20px;
+}
+.linksFlex div:last-child{
+    margin-right: 0;
+}
+.linksFlex div img{
+    width: 100%;
+}
+.linksFlexColumn{
+    display: flex;
+    flex-direction: column;
+}
+.linksFlexColumn a{
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #727272;
+}
+.linksFlexColumn a:last-child{
+    margin-bottom: 0;
+}
+.linksFlexColumn a:hover{
+    color: #FF0000;
+}
+.linksFlexColumn button{
+    margin-bottom: 20px;
+    text-align: left;
+    border: 0;
+    font-size: 14px;
+    color: #727272;
 }
 
 .footerPrivacyPolicy{
@@ -17,4 +94,24 @@
     text-decoration: none;
     color: #3F3F3F;
     font-size: 14px;
+}
+.footerPrivacyPolicy a:hover{
+    color: #FF0000;
+}
+.footerPrivacyPolicy a.active{
+    color: #FF0000;
+}
+
+@media (max-width: 1024px) {
+    .footerNav_link{
+        max-width: 400px;
+    }
+}
+@media (max-width: 991px) {
+    .footerNav{
+        flex-direction: column;
+    }
+    .footerNav_link{
+        margin: 30px 0 0 auto;
+    }
 }

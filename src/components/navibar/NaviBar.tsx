@@ -18,24 +18,64 @@ const NaviBar = () => {
                     <Image src={logo} />
                 </NavLink>
 
-                <NavbarToggle  aria-controls="basic-navbar-nav" />
+                <NavbarToggle aria-controls="basic-navbar-nav" />
 
                 <NavbarCollapse className={cl.myNavbarCollapse} id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink className={cl.myNavLink} to="/">Главная</NavLink>
-                        <NavLink className={cl.myNavLink} to="/about">О нас</NavLink>
-                        <NavLink className={cl.myNavLink} to="/seminar">Обучение</NavLink>
-                        <NavLink className={cl.myNavLink} to="/contacts">Контакты</NavLink>
-
+                        <NavLink
+                            className={({ isActive }) => (isActive 
+                                ? [cl.myNavLink, cl.active].join(' ') 
+                                : cl.myNavLink)} 
+                            to="/"
+                        >
+                            Главная
+                        </NavLink>
+                        <NavLink 
+                            className={({ isActive }) => (isActive 
+                                ? [cl.myNavLink, cl.active].join(' ') 
+                                : cl.myNavLink)} 
+                            to="/about"
+                        >
+                            О нас
+                        </NavLink>
+                        <NavLink 
+                            className={({ isActive }) => (isActive 
+                                ? [cl.myNavLink, cl.active].join(' ') 
+                                : cl.myNavLink)} 
+                            to="/seminar"
+                        >
+                            Обучение
+                        </NavLink>
+                        <NavLink 
+                            className={({ isActive }) => (isActive 
+                                ? [cl.myNavLink, cl.active].join(' ') 
+                                : cl.myNavLink)} 
+                            to="/contacts"
+                        >
+                            Контакты
+                        </NavLink>
                     </Nav>
                 </NavbarCollapse>
 
                 <div className={cl.logoBasketSearch}>
-                    <NavLink className={[cl.myNavLink, cl.loginText].join(' ')} to="/login">Вход/Регистрация</NavLink>
-                    <NavLink className={[cl.myNavLink, cl.loginImg].join(' ')} to="/login">
-                        <Image width={35} height={35} src={user}/>
+                    <NavLink 
+                        className={({ isActive }) => (isActive 
+                            ? [cl.myNavLink, cl.active, cl.loginText].join(' ') 
+                            : [cl.myNavLink, cl.loginText].join(' '))}
+                        to="/login"
+                    >
+                        Вход/Регистрация
                     </NavLink>
-                    <NavLink className={cl.myNavLink} to="/basket">
+                    <NavLink 
+                        className={[cl.myNavLink, cl.loginImg].join(' ')} 
+                        to="/login"
+                    >
+                        <Image width={35} height={35} src={user} />
+                    </NavLink>
+                    <NavLink 
+                        className={cl.myNavLink} 
+                        to="/basket"
+                    >
                         <Image width={50} height={50} src={basket} />
                     </NavLink>
                 </div>
