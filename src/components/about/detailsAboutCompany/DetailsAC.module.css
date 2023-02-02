@@ -1,0 +1,19 @@
+.myContainer{
+    max-width: 800px;
+}
+
+.myContainer h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #2D2A2A;
+}
+
+.myContainer p{
+    margin-bottom: 20px;
+    line-height: 1.8em;
+    font-size: 14px;
+    color: #777777;
+}
+.myContainer p:last-child{
+    margin: 0;
+}

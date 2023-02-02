@@ -23,3 +23,15 @@
     justify-content: center;
     overflow: auto;
 }
+
+.close{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 94%;
+    width: 20px;
+    height: 20px;
+}
+.close img{
+    width: 100%;
+}

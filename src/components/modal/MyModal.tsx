@@ -24,9 +24,9 @@ const MyModal: FC<MyModalProps> = ({children, visible, setVisible}) => {
     return (
         <div className={rootClasses.join(' ')} onClick={hideModal}>
             <div className={cl.myModalContent} onClick={(e) => e.stopPropagation()}>
-                {/* <div>
+                <div className={cl.close} onClick={hideModal}>
                     <img src={close}/>
-                </div> */}
+                </div>
                 {children}
             </div>
         </div>

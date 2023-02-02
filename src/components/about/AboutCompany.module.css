@@ -1,0 +1,79 @@
+.myContainer{
+    margin-top: 96px;
+}
+
+.aboutInfo{
+    max-width: 675px;
+    width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+.aboutInfo h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #232323;
+}
+.aboutInfo h2 span{
+    color: #E81912;
+}
+
+.blockGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 30px;
+}
+
+.blockGrid div{
+    max-width: 307px;
+}
+
+.blockGrid h4{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #2D2A2A;
+}
+
+.blockGrid p{
+    margin: 0;
+    font-size: 14px;
+    color: #777777;
+}
+
+.divBtn{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.divBtn a{
+    padding: 12px 20px;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #E81912;
+    color: #FFFFFF;
+}
+.divBtn a:hover{
+    background-color: #777777;
+}
+.divBtn button{
+    padding: 10px 20px;
+    font-size: 13px;
+    border: 1px solid #EFEFEF;
+    background-color: transparent;
+    text-align: center;
+    color: #333333;
+}
+.divBtn button:hover{
+    background-color: #EFEFEF;
+}
+
+@media (max-width: 768px) {
+    .aboutInfo h2{
+        font-size: 24px;
+    }
+    .blockGrid{
+        gap: 20px;
+    }
+}

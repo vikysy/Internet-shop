@@ -1,8 +1,13 @@
 import React from 'react';
+import AboutCompany from '../components/about/AboutCompany';
+import CompanyAdvantages from '../components/about/CompanyAdvantages';
 
 const About = () => {
     return (
-        <div>About</div>
+        <>
+            <AboutCompany />
+            <CompanyAdvantages />
+        </>
     )
 }
 
