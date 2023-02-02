@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import cl from './Footer.module.css';
 import logo from '../../images/logo.png';
 import vk from '../../images/vk.png';
 import youtube from '../../images/youtube.png';
 import telegram from '../../images/telegram.png';
+import MyModal from '../modal/MyModal';
+import Feedback from '../feedback/Feedback';
 
 const Footer = () => {
+    const [visible, setVisible] = useState(false);
+
     return (
         <div className={cl.footer}>
             <div className='container'>
@@ -30,7 +34,7 @@ const Footer = () => {
                             <div className={cl.linksFlexColumn}>
                                 <h2>ИНФОРМАЦИЯ</h2>
                                 <NavLink to='/about'>О компании</NavLink>
-                                <button>Обратная связь</button>
+                                <button onClick={() => setVisible(true)}>Обратная связь</button>
                             </div>
                             <div>
                                 <h2>СЛЕДИТЕ ЗА НАМИ</h2>
@@ -72,6 +76,9 @@ const Footer = () => {
                 </div>
 
             </div>
+            <MyModal visible={visible} setVisible={setVisible}>
+                <Feedback setVisible={setVisible} />
+            </MyModal> 
         </div>
     )
 }
