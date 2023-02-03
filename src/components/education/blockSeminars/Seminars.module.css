@@ -1,0 +1,9 @@
+.myContainer{
+    margin-top: 40px;
+}
+
+.seminars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

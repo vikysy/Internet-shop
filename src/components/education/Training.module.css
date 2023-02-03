@@ -1,0 +1,25 @@
+.myContainer{
+    margin-top: 96px;
+    box-sizing: border-box;
+    padding: 100px 32px;
+    background-image: url(./obuchenie.jpg);
+}
+
+.myContainer h1{
+    max-width: 1180px;
+    text-align: center;
+    font-size: 78px;
+    background-color: #00000054;
+}
+
+@media (max-width: 991px) {
+    .myContainer h1{
+        font-size: 58px;
+    }
+}
+
+@media (max-width: 767px) {
+    .myContainer h1{
+        font-size: 40px;
+    }
+}
