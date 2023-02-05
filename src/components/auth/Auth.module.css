@@ -1,0 +1,122 @@
+.myContainer{
+    margin-top: 96px;
+}
+
+.mainDFlex{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.flexOne{
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 40px;
+    border-right: 2px solid rgba(129, 129, 129, 0.2);
+}
+
+.mainDFlex h3{
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+    color: #2D2A2A;
+}
+.mainDFlex p{
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #464646;
+}
+.flexOne input{
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid rgba(129, 129, 129, 0.2);
+}
+.flexOne button{
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 0;
+    font-size: 13px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #E81912;
+    color: #FFFFFF;
+}
+.flexOne button:hover{
+    background-color: rgba(129, 129, 129, 0.702);
+}
+
+.formCheked{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.formCheked label{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.formCheked label p{
+    margin: 0;
+    max-width: 100px;
+    width: 100%;
+}
+.formCheked label input{
+    margin: 0;
+    padding: 0;
+}
+.formCheked a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #E81912;
+}
+
+.flexTwo{
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 40px;
+}
+.flexTwo p{
+    margin-bottom: 20px;
+}
+.flexTwo button{
+    max-width: 127px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 20px;
+    font-size: 13px;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #F3F3F3;
+    color: #333333;
+}
+.flexTwo button:hover{
+    background-color: #E81912;
+    color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+    .mainDFlex{
+        flex-direction: column;
+    }
+    .flexOne{
+        margin: 0 auto 20px auto;
+        border-right: 0;
+        border-bottom: 2px solid rgba(129, 129, 129, 0.2);
+    }
+    .flexTwo{
+        margin: 0 auto;
+    }
+}
