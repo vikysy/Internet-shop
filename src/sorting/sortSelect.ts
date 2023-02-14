@@ -33,8 +33,6 @@ export function sortFull(
     } else if (price === 'wane') {
         filterWane(allCatalogs, setAllCatalogs)
     }
-
-    console.log(allCategory, typeSkin, price);
 }
 
 export function filterAll(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {

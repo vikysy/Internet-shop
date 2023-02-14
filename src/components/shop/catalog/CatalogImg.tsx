@@ -7,17 +7,13 @@ import bmc from './bmc.jpg';
 import peel from './peel.jpg';
 import postPeel from './postPeel.jpg';
 
-// interface CatalogImgProps {
-//     allCatalogs: any;
-//     setAllCatalogs: any;
-// }
-
 export interface CatalogProps {
     id: number,
     value: string | string[],
     src: HTMLImageElement | File | string | undefined | any,
     title: string,
     price: number,
+    count: number,
     p: string,
     description: string[],
 }
