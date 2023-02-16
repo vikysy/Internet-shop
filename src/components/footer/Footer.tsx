@@ -27,8 +27,8 @@ const Footer = () => {
                     <div className={cl.footerNav_link}>
                         <div className={cl.linksFlexColumn}>
                             <h2>ПОПУЛЯРНЫЕ БРЕНДЫ</h2>
-                            <NavLink to=''>BIO MEDICAL CARE</NavLink>
-                            <NavLink to=''>PEEL MEDICAL</NavLink>
+                            <NavLink to='/shop'>BIO MEDICAL CARE</NavLink>
+                            <NavLink to='/shop'>PEEL MEDICAL</NavLink>
                         </div>
                         <div>
                             <div className={cl.linksFlexColumn}>

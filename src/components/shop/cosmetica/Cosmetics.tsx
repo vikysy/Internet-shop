@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { basket } from '../../../pages/Basket';
 import { CatalogProps } from '../catalog/CatalogImg';
+import Cosmetic from './Cosmetic';
 import cl from './Cosmetics.module.css';
 
 interface CosmeticsProps {
@@ -8,13 +10,14 @@ interface CosmeticsProps {
 }
 
 const Cosmetics: FC<CosmeticsProps> = ({ allCatalogs }) => {
+    const navigate = useNavigate();
 
     const addProductBasket = (catalog: any, event: any, id: number) => {
         event.stopPropagation();
 
         if (basket.length !== 0) {
 
-            if(basket.find(elem => elem.id === id)) {
+            if (basket.find(elem => elem.id === id)) {
                 catalog.count += 1;
             } else {
                 basket.push(catalog);
@@ -25,18 +28,9 @@ const Cosmetics: FC<CosmeticsProps> = ({ allCatalogs }) => {
     };
 
     return (
-        <div className={cl.productsContainer}>
+        <div className={cl.productsContainer} >
             {allCatalogs.map(catalog => (
-                <div key={catalog.id} className={cl.productContainer} >
-                    <div>
-                        <img src={catalog.src} />
-                    </div>
-                    <h4>{catalog.title}</h4>
-                    <p>{catalog.price} руб.</p>
-                    <button onClick={(event) => addProductBasket(catalog, event, catalog.id)}>
-                        В корзину
-                    </button>
-                </div>
+                <Cosmetic key={catalog.id} catalog={catalog} addProductBasket={addProductBasket} navigate={navigate}/>
             ))}
         </div>
     )

@@ -7,7 +7,6 @@ import Contacts from '../pages/Contacts'
 import Education from '../pages/Education'
 import Main from '../pages/Main'
 import PrivacyPolicy from '../pages/PrivacyPolicy'
-import ProductCategory from '../pages/ProductCategory'
 import ProductCategoryCosmetica from '../pages/ProductCategoryCosmetica'
 import Shop from '../pages/Shop'
 
@@ -22,7 +21,6 @@ const Routing = () => {
                 <Route path='/contacts' element={< Contacts />} />
                 <Route path='/shop' element={< Shop />} />
                 <Route path='/basket' element={< Basket />} />
-                <Route path='/category' element={< ProductCategory />} />
                 <Route path='/category/:id' element={< ProductCategoryCosmetica />} />
                 <Route path='/privacyPolicy' element={< PrivacyPolicy />} />
                 <Route path='*' element={<Navigate to='/' />} />

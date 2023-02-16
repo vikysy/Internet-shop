@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
@@ -6,10 +6,21 @@ import { NavLink } from 'react-router-dom';
 import './NaviBar.module.css';
 import cl from './NaviBar.module.css';
 import logo from '../../images/logo.png';
-import basket from '../../images/basket.png';
+import basketIMG from '../../images/basket.png';
 import user from '../../images/user.png';
+import { basket } from '../../pages/Basket';
 
 const NaviBar = () => {
+    const [basketLength, setBasketLength] = useState(trackChangeBasket());
+
+    useEffect(() => {
+        setBasketLength(trackChangeBasket())
+    }, [basket, basket.length, basketLength])
+
+    function trackChangeBasket() {
+        return basket.reduce((sum, current) => sum + current.count, 0);
+    }
+
     return (
         <Navbar className={cl.myNavbar} expand="lg">
             <Container>
@@ -23,41 +34,41 @@ const NaviBar = () => {
                 <NavbarCollapse className={cl.myNavbarCollapse} id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavLink
-                            className={({ isActive }) => (isActive 
-                                ? [cl.myNavLink, cl.active].join(' ') 
-                                : cl.myNavLink)} 
+                            className={({ isActive }) => (isActive
+                                ? [cl.myNavLink, cl.active].join(' ')
+                                : cl.myNavLink)}
                             to="/"
                         >
                             Главная
                         </NavLink>
-                        <NavLink 
-                            className={({ isActive }) => (isActive 
-                                ? [cl.myNavLink, cl.active].join(' ') 
-                                : cl.myNavLink)} 
+                        <NavLink
+                            className={({ isActive }) => (isActive
+                                ? [cl.myNavLink, cl.active].join(' ')
+                                : cl.myNavLink)}
                             to="/about"
                         >
                             О нас
                         </NavLink>
-                        <NavLink 
-                            className={({ isActive }) => (isActive 
-                                ? [cl.myNavLink, cl.active].join(' ') 
-                                : cl.myNavLink)} 
+                        <NavLink
+                            className={({ isActive }) => (isActive
+                                ? [cl.myNavLink, cl.active].join(' ')
+                                : cl.myNavLink)}
                             to="/education"
                         >
                             Обучение
                         </NavLink>
-                        <NavLink 
-                            className={({ isActive }) => (isActive 
-                                ? [cl.myNavLink, cl.active].join(' ') 
-                                : cl.myNavLink)} 
+                        <NavLink
+                            className={({ isActive }) => (isActive
+                                ? [cl.myNavLink, cl.active].join(' ')
+                                : cl.myNavLink)}
                             to="/shop"
                         >
                             Каталог
                         </NavLink>
-                        <NavLink 
-                            className={({ isActive }) => (isActive 
-                                ? [cl.myNavLink, cl.active].join(' ') 
-                                : cl.myNavLink)} 
+                        <NavLink
+                            className={({ isActive }) => (isActive
+                                ? [cl.myNavLink, cl.active].join(' ')
+                                : cl.myNavLink)}
                             to="/contacts"
                         >
                             Контакты
@@ -66,25 +77,26 @@ const NaviBar = () => {
                 </NavbarCollapse>
 
                 <div className={cl.logoBasketSearch}>
-                    <NavLink 
-                        className={({ isActive }) => (isActive 
-                            ? [cl.myNavLink, cl.active, cl.loginText].join(' ') 
+                    <NavLink
+                        className={({ isActive }) => (isActive
+                            ? [cl.myNavLink, cl.active, cl.loginText].join(' ')
                             : [cl.myNavLink, cl.loginText].join(' '))}
                         to="/login"
                     >
                         Вход/Регистрация
                     </NavLink>
-                    <NavLink 
-                        className={[cl.myNavLink, cl.loginImg].join(' ')} 
+                    <NavLink
+                        className={[cl.myNavLink, cl.loginImg].join(' ')}
                         to="/login"
                     >
                         <Image width={35} height={35} src={user} />
                     </NavLink>
-                    <NavLink 
-                        className={cl.myNavLink} 
+                    <NavLink
+                        className={[cl.myNavLink, cl.linkBasket].join(' ')}
                         to="/basket"
                     >
-                        <Image width={50} height={50} src={basket} />
+                        <div>{basketLength}</div>
+                        <Image width={50} height={50} src={basketIMG} />
                     </NavLink>
                 </div>
 

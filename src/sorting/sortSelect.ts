@@ -35,11 +35,11 @@ export function sortFull(
     }
 }
 
-export function filterAll(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterAll(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     setAllCatalogs(newCategoryCatalogs);
 }
 
-export function filterBmc(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterBmc(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     newCategoryCatalogs = catalogs.filter(catalog => {
         if (typeof catalog.value === 'object') {
 
@@ -53,7 +53,7 @@ export function filterBmc(newCategoryCatalogs: CatalogProps[], setAllCatalogs: a
     setAllCatalogs(newCategoryCatalogs);
 }
 
-export function filterPeel(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterPeel(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     newCategoryCatalogs = catalogs.filter(catalog => {
         if (catalog.value === 'peel') {
             return catalog;
@@ -62,7 +62,7 @@ export function filterPeel(newCategoryCatalogs: CatalogProps[], setAllCatalogs: 
     setAllCatalogs(newCategoryCatalogs);
 }
 
-export function filterPostPeel(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterPostPeel(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     newCategoryCatalogs = catalogs.filter(catalog => {
         if (catalog.value === 'postPeel') {
             return catalog;
@@ -71,7 +71,7 @@ export function filterPostPeel(newCategoryCatalogs: CatalogProps[], setAllCatalo
     setAllCatalogs(newCategoryCatalogs);
 }
 
-export function filterOily(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterOily(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     setAllCatalogs(newCategoryCatalogs.filter(catalog => {
         if (typeof catalog.value === 'object') {
 
@@ -84,7 +84,7 @@ export function filterOily(newCategoryCatalogs: CatalogProps[], setAllCatalogs: 
     }));
 }
 
-export function filterSensitive(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterSensitive(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     setAllCatalogs(newCategoryCatalogs.filter(catalog => {
         if (typeof catalog.value === 'object') {
 
@@ -97,7 +97,7 @@ export function filterSensitive(newCategoryCatalogs: CatalogProps[], setAllCatal
     }));
 }
 
-export function filterNormal(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterNormal(newCategoryCatalogs: CatalogProps[], setAllCatalogs: any) {
     setAllCatalogs(newCategoryCatalogs.filter(catalog => {
         if (typeof catalog.value === 'object') {
 
@@ -111,13 +111,13 @@ export function filterNormal(newCategoryCatalogs: CatalogProps[], setAllCatalogs
 }
 
 
-export function filterRise(allCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterRise(allCatalogs: CatalogProps[], setAllCatalogs: any) {
     setAllCatalogs(allCatalogs.sort((a, b) => {
         return b.price - a.price;
     }))
 }
 
-export function filterWane(allCatalogs: CatalogProps[], setAllCatalogs: any) {
+function filterWane(allCatalogs: CatalogProps[], setAllCatalogs: any) {
     setAllCatalogs(allCatalogs.sort((a, b) => {
         return a.price - b.price;
     }))

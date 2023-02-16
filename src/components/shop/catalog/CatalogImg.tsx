@@ -7,6 +7,11 @@ import bmc from './bmc.jpg';
 import peel from './peel.jpg';
 import postPeel from './postPeel.jpg';
 
+interface CatalogImg{
+    allCategory: string;
+    setAllCategory: any;
+}
+
 export interface CatalogProps {
     id: number,
     value: string | string[],
@@ -18,12 +23,12 @@ export interface CatalogProps {
     description: string[],
 }
 
-const CatalogImg: FC = () => {
+const CatalogImg: FC<CatalogImg> = ({allCategory, setAllCategory}) => {
 
     const [allCatalogs, setAllCatalogs] = useState<CatalogProps[]>(catalogs);
     let newCategoryCatalogs: CatalogProps[] = [];
 
-    const [allCategory, setAllCategory] = useState('allCategory');
+    // const [allCategory, setAllCategory] = useState('allCategory');
     const [typeSkin, setTypeSkin] = useState('allSkin');
     const [price, setPrice] = useState('');
 

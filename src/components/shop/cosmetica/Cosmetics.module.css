@@ -50,6 +50,12 @@
     color: #FFFFFF;
 }
 
+.productContainer button.inBasketBtn{
+    cursor:auto;
+    background-color: #777777;
+    color: #FFFFFF;
+}
+
 @media (max-width: 575px) {
     .productsContainer{
         grid-template-columns: repeat(2, 50%);
