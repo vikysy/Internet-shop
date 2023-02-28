@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
@@ -8,18 +8,12 @@ import cl from './NaviBar.module.css';
 import logo from '../../images/logo.png';
 import basketIMG from '../../images/basket.png';
 import user from '../../images/user.png';
-import { basket } from '../../pages/Basket';
 
-const NaviBar = () => {
-    const [basketLength, setBasketLength] = useState(trackChangeBasket());
+interface NaviBar {
+    basketLength: number,
+}
 
-    useEffect(() => {
-        setBasketLength(trackChangeBasket())
-    }, [basket, basket.length, basketLength])
-
-    function trackChangeBasket() {
-        return basket.reduce((sum, current) => sum + current.count, 0);
-    }
+const NaviBar: FC<NaviBar> = ({basketLength}) => {
 
     return (
         <Navbar className={cl.myNavbar} expand="lg">

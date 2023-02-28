@@ -28,7 +28,6 @@ const CatalogImg: FC<CatalogImg> = ({allCategory, setAllCategory}) => {
     const [allCatalogs, setAllCatalogs] = useState<CatalogProps[]>(catalogs);
     let newCategoryCatalogs: CatalogProps[] = [];
 
-    // const [allCategory, setAllCategory] = useState('allCategory');
     const [typeSkin, setTypeSkin] = useState('allSkin');
     const [price, setPrice] = useState('');
 

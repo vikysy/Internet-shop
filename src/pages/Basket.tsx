@@ -1,13 +1,11 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { CatalogProps } from '../components/shop/catalog/CatalogImg';
 import cl from '../components/basket/Basket.module.css';
 import BasketProduct from '../components/basket/BasketProduct';
-// import { BasketContext } from '../App';
 
 export let basket: CatalogProps[] = [];
 
 const Basket = () => {
-    // const {basketLength, setBasketLength} = useContext(BasketContext);
     const [sumMany, setSumMany] = useState(0);
     const [basketLength, setBasketLength] = useState(basket.length);
 
@@ -16,6 +14,8 @@ const Basket = () => {
         for(let i=0; i< basket.length; i++){
             if(basket[i].id !== id) {
                 copy.push(basket[i])
+            } else {
+                basket[i].count = 1;
             }
         }
         basket = copy;
